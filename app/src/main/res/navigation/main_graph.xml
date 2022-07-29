@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/main_graph">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/homeFragment">
 
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.rmanzur.ec3.CategoriesFragment"
+        android:label="fragment_categories"
+        tools:layout="@layout/fragment_categories" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.rmanzur.ec3.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/offersFragment"
+        android:name="com.rmanzur.ec3.OffersFragment"
+        android:label="fragment_offers"
+        tools:layout="@layout/fragment_offers" />
+    <fragment
+        android:id="@+id/productDetails"
+        android:name="com.rmanzur.ec3.ProductDetails"
+        android:label="fragment_product_details"
+        tools:layout="@layout/fragment_product_details" />
+    <fragment
+        android:id="@+id/productsFragment"
+        android:name="com.rmanzur.ec3.ProductsFragment"
+        android:label="fragment_products"
+        tools:layout="@layout/fragment_products" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.rmanzur.ec3.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/supportFragment"
+        android:name="com.rmanzur.ec3.SupportFragment"
+        android:label="fragment_support"
+        tools:layout="@layout/fragment_support" />
 </navigation>
