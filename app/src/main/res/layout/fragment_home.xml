@@ -4,11 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeFragment">
-    <Button
-        android:id="@+id/get_request_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="GET request"
-        android:layout_gravity="center"/>
-
+    
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_productos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="28dp"
+        tools:listitem="@layout/product_item"/>
 </FrameLayout>

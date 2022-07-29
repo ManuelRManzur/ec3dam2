@@ -1,10 +1,16 @@
 package com.rmanzur.ec3
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -27,6 +33,7 @@ class HomeFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+
     }
 
     override fun onCreateView(
@@ -34,9 +41,30 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        val view= inflater.inflate(R.layout.fragment_home, container, false)
+        val recyclerViewProducto = view.findViewById<RecyclerView>(R.id.recycler_view_productos)
+        recyclerViewProducto.layoutManager=LinearLayoutManager(context)
+        recyclerViewProducto.setHasFixedSize(true)
+        getProductoData { productos:List<ProductModel> -> recyclerViewProducto.adapter=ProductAdapter(productos) }
+
+        return view
     }
 
+    private fun getProductoData(callback: (List<ProductModel>)->Unit) {
+        val serviceGenerator = ServiceGenerator.buildService(ApiService::class.java)
+        val call = serviceGenerator.getProductos()
+        call.enqueue(object : Callback<List<ProductModel>>{
+            override fun onResponse(call: Call<List<ProductModel>>, response: Response<List<ProductModel>>
+            ) {
+                val productos = response.body()
+                return callback(productos!!)
+            }
+
+            override fun onFailure(call: Call<List<ProductModel>>, t: Throwable) {
+                Log.d("HomeFragment", "Error:${t.message}")
+            }
+        })
+    }
     companion object {
         /**
          * Use this factory method to create a new instance of

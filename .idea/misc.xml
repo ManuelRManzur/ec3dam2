@@ -3,7 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Manuel/AndroidStudioProjects/EC3/app/src/main/res/drawable/bordericon.xml" value="0.1775" />
+        <entry key="..\:/Users/Manuel/AndroidStudioProjects/EC3/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Manuel/AndroidStudioProjects/EC3/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Manuel/AndroidStudioProjects/EC3/app/src/main/res/layout/fragment_products.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Manuel/AndroidStudioProjects/EC3/app/src/main/res/layout/fragment_profile.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Manuel/AndroidStudioProjects/EC3/app/src/main/res/layout/navbar_background.xml" value="0.33" />
+        <entry key="..\:/Users/Manuel/AndroidStudioProjects/EC3/app/src/main/res/layout/product_item.xml" value="0.203125" />
+        <entry key="..\:/Users/Manuel/AndroidStudioProjects/EC3/app/src/main/res/layout/shapeborder.xml" value="0.19010416666666666" />
+        <entry key="..\:/Users/Manuel/AndroidStudioProjects/EC3/app/src/main/res/menu/main_menu.xml" value="0.33" />
       </map>
     </option>
   </component>
